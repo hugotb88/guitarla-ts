@@ -52,3 +52,30 @@ export default tseslint.config({
   },
 })
 ```
+React + Vite
+This project is the same than guitarla, but with Typescript
+  - Files as .tsx instead or .jsx
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+@vitejs/plugin-react uses Babel for Fast Refresh
+@vitejs/plugin-react-swc uses SWC for Fast Refresh
+React + Vite
+npm create vite@latest to start the launcher for VITE
+
+Choose name project, React and "Javascript + SWC"
+swc is a compiler.
+
+npm install in the project folder to install all the dependencies.
+
+npm run dev To start the server and run the app
+
+How to deploy
+Take a look in the package.json, you will see in the 'scripts' section the parameter 'build' with 'vite build' (because the project was made with VITE)
+Go to terminal and execute npm run build
+It will create a folder called 'dist' with the .js and .css files along the index.html
+You need to upload the whole dist folder to some place like Netlify (its free)
+Go to sites
+upload the dist folder and go to the site
