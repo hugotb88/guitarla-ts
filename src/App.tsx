@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Header from './components/Header'
 import Guitar from './components/Guitar'
 import useCart from './hooks/useCart'
@@ -7,9 +6,6 @@ function App() {
   // Using custom hook
   const { data, cart, addToCart, removeFromCart, decreaseQuantity, increaseQuantity, clearCart, isEmpty, cartTotal } = useCart()
   
-  //Use of useState
-  const [auth, setAuth] = useState(20)
-
   return (
     <>
       <Header

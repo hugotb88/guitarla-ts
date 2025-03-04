@@ -74,7 +74,7 @@ swc is a compiler.
 
 ## How to deploy
 - Take a look in the package.json, you will see in the 'scripts' section the parameter 'build' with 'vite build' (because the project was made with VITE)
-- Go to terminal and execute npm run build
+- Go to terminal and execute 'npm run build'
 - It will create a folder called 'dist' with the .js and .css files along the index.html
 - You need to upload the whole dist folder to some place like Netlify (its free)
   - Go to sites
