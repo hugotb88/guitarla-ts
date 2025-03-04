@@ -1,3 +1,5 @@
+import type { Guitar } from "../types"
+
 // Mocked data
 export const db: Guitar[] = [
     {

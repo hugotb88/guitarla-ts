@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react"
 import { db } from '../data/db'
-import type { CartItem } from "../types"
+import type { CartItem, Guitar } from "../types"
 
 // Custom Hook
 // .js file because jsx contains also templates or visuals, a hook should not.
@@ -28,7 +28,7 @@ const useCart = () => {
 
 
     // Adding guitars to cart
-    function addToCart(item) {
+    function addToCart(item : Guitar) {
         //Review if the added item alread exists in the cart
         const itemExists = cart.findIndex(guitar => guitar.id === item.id)
         if (itemExists >= 0) {
@@ -40,8 +40,8 @@ const useCart = () => {
             setCart(updatedCart) // Using the Hook to update the cart, using immutable function (not modifying th eoriginal state)
         } else {
             console.log('Item doesnt exist... adding it')
-            item.quantity = 1 // property added on the flight
-            setCart(() => [...cart, item])
+            const newItem : CartItem = {...item, quantity : 1}
+            setCart(() => [...cart, newItem])
         }
 
     }
