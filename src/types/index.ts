@@ -8,3 +8,9 @@ export type Guitar = {
     description : string 
     price : number
 }
+
+// Type CartItem  definition
+// Inherits all the attributes from Guitar -> Using  'Guitar &'
+export type CartItem = Guitar & {  
+    quantity : number
+}

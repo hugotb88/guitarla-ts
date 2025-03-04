@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react"
 import { db } from '../data/db'
+import type { Guitar } from "../types"
 
 // Custom Hook
 // .js file because jsx contains also templates or visuals, a hook should not.
@@ -9,7 +10,7 @@ const useCart = () => {
     const MIN_ITEMS = 1
 
     // Initial Cart state in case it has elements already
-    const initialCart = () => {
+    const initialCart = () : Guitar[] => {
         const localStorageCart = localStorage.getItem('cart')
         return localStorageCart ? JSON.parse(localStorageCart) : []
     }
