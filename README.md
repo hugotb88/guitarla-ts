@@ -91,3 +91,28 @@ Types of data that Typescript supports by default.
 - null 
 - undefined
 
+### Types and Interfaces
+Both are accpted by the community and are pretty similar.
+Its a way to create an structure or group propertiesof an object.
+
+Type
+
+```
+type Guitar = {
+  id : number
+  image : string 
+  description : string
+  price : number
+}
+```
+
+Interface
+
+```
+interface Guitar = {
+  id : number
+  image : string 
+  description : string
+  price : number
+}
+```
