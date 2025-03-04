@@ -29,7 +29,6 @@ function App() {
             <Guitar
               key={guitar.id}
               guitar={guitar}
-              cart={cart}
               addToCart={addToCart}
             />
           ))}
