@@ -7,7 +7,13 @@ type Guitar = {
     price : number
 }
 
-function Guitar({guitar, addToCart} : { guitar: Guitar, addToCart: (item: Guitar) => void } ) {
+// Assign Types to props
+type GuitarProps = {
+    guitar: Guitar, 
+    addToCart: (item: Guitar) => void
+}
+
+function Guitar({guitar, addToCart} : GuitarProps ) {
 
     const {id, name, image, description, price} = guitar
 
