@@ -1,18 +1,3 @@
-// Type Addition
-type Guitar = {
-    id : number
-    name : string
-    image : string
-    description : string
-    price : number
-}
-
-// Assign Types to props
-type GuitarProps = {
-    guitar: Guitar, 
-    addToCart: (item: Guitar) => void
-}
-
 function Guitar({guitar, addToCart} : GuitarProps ) {
 
     const {id, name, image, description, price} = guitar
