@@ -47,13 +47,13 @@ const useCart = () => {
     }
 
     // Remove from cart
-    function removeFromCart(id) {
+    function removeFromCart(id : Guitar['id']) { // Using a Lookup
         console.log("Removing item...")
         setCart(prevCart => prevCart.filter(guitar => guitar.id !== id))
     }
 
     // Increment Quantity
-    function increaseQuantity(id) {
+    function increaseQuantity(id : Guitar['id']) { // Using a Lookup
         console.log("Incrementing...")
         const updatedCart = cart.map(item => {
             if (item.id === id && item.quantity < MAX_ITEMS) {
@@ -68,7 +68,7 @@ const useCart = () => {
     }
 
     // Decrement Quantity
-    function decreaseQuantity(id) {
+    function decreaseQuantity(id : Guitar['id']) { // Using a Lookup
         console.log("Decrementing...")
         const updatedCart = cart.map(item => {
             if (item.id === id && item.quantity > MIN_ITEMS) {
